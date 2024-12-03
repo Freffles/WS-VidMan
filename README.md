@@ -9,7 +9,27 @@ A modern, responsive web application for managing and exploring your video colle
 - 📱 Fully responsive design
 - 🔍 Search and filter functionality
 - 💫 Smooth hover animations and transitions
-- 🎨 Modern UI with blue accent colors
+- 🎨 Clean UI with subtle borders and contrasting text
+- 🖼️ Elegant card design with translucent info bars
+- ♿ Accessibility features with ARIA labels
+
+## UI Design
+
+- **Card Design**:
+  - Subtle borders with increased visibility in light mode
+  - Translucent gray info bar with high-contrast text
+  - Smooth hover transitions for interactive elements
+  - Responsive aspect ratio for video thumbnails
+
+- **Theme Support**:
+  - Light mode with clean, subtle grays
+  - Dark mode with balanced contrast
+  - Persistent theme preference storage
+
+- **Typography**:
+  - Bold titles for clear hierarchy
+  - Medium weight for supporting text
+  - High contrast ratios for readability
 
 ## Tech Stack
 

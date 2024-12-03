@@ -3,6 +3,18 @@
  * Main application component for the Video Collection Manager.
  * Implements the core UI layout including sidebar navigation,
  * search functionality, and video grid display.
+ * 
+ * Features:
+ * - Responsive layout with sidebar and main content area
+ * - Theme-aware components with light/dark mode support
+ * - Video card grid with hover interactions
+ * - Accessible UI elements with ARIA labels
+ * 
+ * UI Components:
+ * - Video Cards: Elegant design with translucent info bars and high-contrast text
+ * - Search Bar: Full-width search input with icon
+ * - Filter Controls: Genre and year filtering dropdowns
+ * - Navigation: Home, Favorites, and Watchlist links
  */
 
 import { useState } from 'react'
@@ -85,7 +97,7 @@ function App() {
                 aria-label="Search videos"
               />
               <svg className="w-6 h-6 text-gray-400 absolute right-4 top-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
               </svg>
             </div>
           </div>
@@ -110,17 +122,17 @@ function App() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {/* Video Cards */}
             {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div key={item} className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+              <div key={item} className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border-2 border-gray-300 dark:border-gray-700">
                 <div className="relative">
-                  <div className="aspect-video bg-gray-100 dark:bg-gray-700 border-b border-gray-200 dark:border-gray-700"></div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-gray-900/90 dark:bg-gray-900/90 p-4">
+                  <div className="aspect-video bg-gray-50 dark:bg-gray-700 border-b border-gray-300 dark:border-gray-700"></div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gray-200/95 dark:bg-gray-800/95 p-4">
                     <div className="flex items-center justify-between">
                       <div>
-                        <h3 className="font-semibold text-blue-400">Video Title</h3>
-                        <p className="text-sm text-gray-400">2024 • Action</p>
+                        <h3 className="font-bold text-gray-900 dark:text-white">Video Title</h3>
+                        <p className="text-sm font-medium text-gray-700 dark:text-gray-200">2024 • Action</p>
                       </div>
                       <button 
-                        className="opacity-0 group-hover:opacity-100 bg-blue-500 text-white px-4 py-1.5 rounded-lg hover:bg-blue-600 transition-all duration-200 text-sm"
+                        className="opacity-0 group-hover:opacity-100 bg-blue-500 text-white px-4 py-1.5 rounded-lg hover:bg-blue-600 transition-all duration-200 text-sm font-medium"
                         aria-label="View video details"
                       >
                         View Details

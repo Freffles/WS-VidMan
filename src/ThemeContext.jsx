@@ -2,6 +2,13 @@
  * ThemeContext.jsx
  * Provides theme management functionality for the application.
  * Handles light/dark mode switching and persistence via localStorage.
+ * 
+ * Theme Features:
+ * - Light mode: Clean UI with subtle grays and high contrast text
+ * - Dark mode: Balanced dark theme with appropriate contrast levels
+ * - System preference detection on first load
+ * - Persistent theme storage in localStorage
+ * - Smooth color transitions between themes
  */
 
 import { createContext, useContext, useEffect, useState } from 'react';
